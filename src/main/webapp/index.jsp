@@ -102,24 +102,24 @@ for(int i=0;i<arr.length();i++){
 
 <script>
 document.getElementById("allArticles").addEventListener('click',(e)=>{
-	window.location = "http://192.168.1.10:8080/blogweb/new";
+	window.location = "http://localhost:8080/blogweb/new";
 })
 
 function readMore(e){
 	
 	var articleId=e.id.slice(8);	
-	window.location="http://192.168.1.10:8080/blogweb/readMore?id="+articleId;
+	window.location="http://localhost:8080/blogweb/readMore?id="+articleId;
 }
 
 function edit(e){
 	var articleId=e.id.slice(4);
-	window.location='http://192.168.1.10:8080/blogweb/edit?id='+articleId;
+	window.location='http://localhost:8080/blogweb/edit?id='+articleId;
 }
 
 function deleteArticle(e){
 	e.parentElement.remove();
 	var articleId=e.id.slice(6);
-	window.location='http://192.168.1.10:8080/blogweb/delete?id='+articleId;
+	window.location='http://localhost:8080/blogweb/delete?id='+articleId;
 }
 
 </script>

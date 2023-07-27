@@ -74,14 +74,14 @@ JSONObject article=(JSONObject)request.getAttribute("article");
 
 
 document.getElementById('cancel').addEventListener('click',(e)=>{
-	window.location= "http://192.168.1.10:8080/blogweb/all";
+	window.location= "http://localhost:8080/blogweb/all";
 })
 
 function saveClick(e){
 	var title=document.getElementById('title').value;
 	var description=document.getElementById('description').value;
 	var markdown=document.getElementById('markdown').value;
-	window.location= "http://192.168.1.10:8080/blogweb/save?title="+encodeURIComponent(title)+"&description="+encodeURIComponent(description)+"&markdown="+encodeURIComponent(markdown)+"&id="+e.id;
+	window.location= "http://localhost:8080/blogweb/save?title="+encodeURIComponent(title)+"&description="+encodeURIComponent(description)+"&markdown="+encodeURIComponent(markdown)+"&id="+e.id;
 }
 </script>
 

@@ -20,7 +20,7 @@ public class AllArticles extends HttpServlet {
 
 	try{  
 		Class.forName("com.mysql.jdbc.Driver");  
-		Connection con=DriverManager.getConnection("jdbc:mysql://192.168.1.10:3306/articles","root","");  
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/articles","root","");  
 		//here sonoo is database name, root is username and password  
 		Statement stmt=con.createStatement();  
 		ResultSet rs=stmt.executeQuery("select * from article");  

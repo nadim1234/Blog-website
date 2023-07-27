@@ -19,7 +19,7 @@ public class DeleteController extends HttpServlet {
 		String articleId=req.getParameter("id");
 		try {
 			Class.forName("com.mysql.jdbc.Driver");  
-			Connection con=DriverManager.getConnection("jdbc:mysql://192.168.1.10:3306/articles","root",""); 
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/articles","root",""); 
 			PreparedStatement stmt=con.prepareStatement("delete from article where id=?");
 			stmt.setString(1, articleId);
 			stmt.executeUpdate();

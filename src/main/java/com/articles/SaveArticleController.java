@@ -19,10 +19,10 @@ public class SaveArticleController extends HttpServlet{
 		String markdown=req.getParameter("markdown");
 		String articleId=req.getParameter("id");
 		System.out.println("article id"+articleId);
-		if(articleId!=null) {
+		 if(articleId!=null) {
 			try {
 				Class.forName("com.mysql.jdbc.Driver");  
-				Connection con=DriverManager.getConnection("jdbc:mysql://192.168.1.10:3306/articles","root","");
+				Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/articles","root","");
 				PreparedStatement stmt=con.prepareStatement("update article set title=?, description=?, markdown=? where id=?");  
 				stmt.setString(1, title);
 				stmt.setString(2, description);
@@ -40,7 +40,7 @@ public class SaveArticleController extends HttpServlet{
 	      String date=new SimpleDateFormat ("yyyy-MM-dd").format(new Date());
 		try {
 			Class.forName("com.mysql.jdbc.Driver");  
-			Connection con=DriverManager.getConnection("jdbc:mysql://192.168.1.10:3306/articles","root","");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/articles","root","");
 			PreparedStatement stmt=con.prepareStatement("insert into article (title,description,markdown,date) values(?,?,?,?)");  
 			stmt.setString(1, title);
 			stmt.setString(2, description);

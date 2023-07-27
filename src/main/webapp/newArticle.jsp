@@ -65,19 +65,19 @@ border-radius:12px;
 <textarea id="markdown" name="markdown" Placeholder="Enter markdown here"></textarea>
 <button id="cancel">Cancel</button>
 <button id="save">Save</button>
-
 <script>
 
 
 document.getElementById('cancel').addEventListener('click',()=>{
-	window.location= "http://192.168.1.10:8080/blogweb/all";
+	window.location= "http://localhost:8080/blogweb/all";
 })
 
 document.getElementById("save").addEventListener('click',()=>{
+	debugger;
 	var title=document.getElementById('title').value;
 	var description=document.getElementById('description').value;
 	var markdown=document.getElementById('markdown').value;
-	window.location= "http://192.168.1.10:8080/blogweb/save?title="+encodeURIComponent(title)+"&description="+encodeURIComponent(description)+"&markdown="+encodeURIComponent(markdown);
+	window.location= "http://localhost:8080/blogweb/save?title="+encodeURIComponent(title)+"&description="+encodeURIComponent(description)+"&markdown="+encodeURIComponent(markdown);
 })
 </script>
 </body>

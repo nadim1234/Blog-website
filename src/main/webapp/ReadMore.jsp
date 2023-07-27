@@ -71,12 +71,12 @@ HtmlRenderer renderer = HtmlRenderer.builder().build();
 
 <script>
 document.getElementsByClassName('allBtn')[0].addEventListener('click',()=>{
-	window.location='http://192.168.1.10:8080/blogweb/all';
+	window.location='http://localhost:8080/blogweb/all';
 })
 
 function editClick(e){
 	var articleId=e.id.slice(4);
-	window.location='http://192.168.1.10:8080/blogweb/edit?id='+articleId;
+	window.location='http://localhost:8080/blogweb/edit?id='+articleId;
 }
 
 </script>
